@@ -1,0 +1,3 @@
+before_env/
+*.pyc
+before_i_die/db.sqlite3
