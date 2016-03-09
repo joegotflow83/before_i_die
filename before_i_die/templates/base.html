@@ -7,13 +7,14 @@
     <body>
 		<ul class="nav nav-pills">
       {% if user.is_authenticated %}
-  		  <li role="presentation"><a href="#">Home</a></li>
-  		  <li role="presentation"><a href="#">Profile</a></li>
-  		  <li role="presentation"><a href="#">Messages</a></li>
+      <li role="presentation"><a href="{% url 'home' %}">Home</a></li>
+      <li role="presentation"><a href="{% url 'create_post' %}">Create Post</a></li>
+      <li role="presentation"><a href="{% url 'users' %}">Active Users</a></li>
+      <li role="presentation"><a href="{% url 'search' %}">Search</a></li>
+      <li role="presentation"><a href="{% url 'logout' %}">Logout</a></li>
       {% else %}
         <li role="presentation"><a href="{% url 'login' %}">Login</a></li>
         <li role="presentation"><a href="{% url 'signup' %}">Sign Up</a></li>
-        <li role="presentation"><a href="{% url 'logout' %}">Logout</a></li>
       {% endif %}
 		</ul>
 		{% block content %}

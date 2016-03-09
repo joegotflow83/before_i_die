@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Active Users{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <h3>Check out what other users are saying about the world</h3>
+  <em>Click on their username to see their posts</em>
+  <br><br>
+  <div>
+  {% for user in object_list %}
+  <h4><a href="{% url 'user_posts' user.id %}">{{ user.username | linebreaks}}</a></h4>
+  <br>
+  {% endfor %}
+  </div>
+</div>
+{% endblock %}

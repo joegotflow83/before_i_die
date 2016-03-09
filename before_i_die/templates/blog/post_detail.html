@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ object.title }}{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <h3>Title: {{ object.title }}</h3>
+  <p>Body: {{ object.body }}</p>
+  {% if object.image %}
+    <img src="/media/{{ object.image }}">
+  {% endif %}
+  <p>Likes: {{ object.like }}</p>
+  <p>People Who Have Liked This Post:</p>
+  {% for like in object.likes.all %}
+    <p>{{ like }}</p>
+  {% endfor %}
+  <p>Tags: </p>
+  {% for tag in object.tags.all %}
+    {{ tag }}
+  {% endfor %}
+  <br><br>
+  <a href="{% url 'add_like' object.id %}" class="btn btn-info">Like!</a></p>
+  <em>Created: {{ object.created }}</em>
+</div>
+{% endblock %}

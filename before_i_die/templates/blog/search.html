@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Search{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <h3>Search for a users post by the tags</h3>
+  <form method="post" action="">
+    {% csrf_token %}
+    <p>Search For A Post By Tag: </p><input type="text" name="query">
+    <input type="submit" value="Search" class="btn btn-info">
+  </form>
+</div>
+{% endblock %}
