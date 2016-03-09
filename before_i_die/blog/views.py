@@ -7,6 +7,11 @@ from django.contrib.auth.models import User
 from .models import Post, Like
 
 
+class Index(TemplateView):
+    """Home page when user enters site"""
+    template_name = 'blog/index.html'
+
+
 class UserPosts(TemplateView):
     """Display the users posts"""
     template_name = 'blog/post_list.html'

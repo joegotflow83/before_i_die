@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Before I Die{% endblock title %}
+
+{% block content %}
+<div class="jumbotron text-center">
+  <h1>Before I Die</h1>
+  <h3><em>Where would you want to go?</em></h3>
+  <a href="{% url 'login' %}" class="btn btn-info">Login Now!</a>
+  <a href="{% url 'signup' %}" class="btn btn-danger">Sign Up!</a>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+<style>
+  .jumbotron {
+    background-image: url(https://images.unsplash.com/photo-1454678904372-2ca94103eca4?crop=entropy&fit=crop&fm=jpg&h=750&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1300);
+  }
+</style>
+{% endblock %}

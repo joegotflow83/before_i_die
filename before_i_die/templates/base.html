@@ -13,6 +13,7 @@
       <li role="presentation"><a href="{% url 'search' %}">Search</a></li>
       <li role="presentation"><a href="{% url 'logout' %}">Logout</a></li>
       {% else %}
+        <li role="presentation"><a href="{% url 'index' %}">Index</a></li>
         <li role="presentation"><a href="{% url 'login' %}">Login</a></li>
         <li role="presentation"><a href="{% url 'signup' %}">Sign Up</a></li>
       {% endif %}
